@@ -529,7 +529,7 @@ class ThermiaHeatPump:
     @property
     def buffer_tank_temperature(self):
         return get_dict_value_or_none(
-            self.get_register_data_by_register_group_and_name(REG_GROUP_TEMPERATURES, REG_OPER_DATA_BUFFER_TANK),
+            self.__get_temperature_data_by_register_name(REG_OPER_DATA_BUFFER_TANK),
             "value",
         )
 
